@@ -1,0 +1,51 @@
+DEBUG = -v --fargs "-Ofast -DFORTHON -cpp -DYES=1 -DOK=0 -DDONE=1 -DSTDOUT=6 -fallow-argument-mismatch" # -g #--fargs "-C=array" #--fargs "-CB -traceback"
+
+SO = so
+PUBLICHOME = 
+BUILDDIR = build
+DIRLIST = glr utl
+MYPYTHON = python3
+FORTHON = Forthon3
+BUILDBASE = -v --build-base $(BUILDDIR)
+INSTALLARGS = --pkgbase flora $(BUILDBASE) 
+SHELL=bash
+
+all: mppl2f90 $(BUILDDIR)/glrpydep $(BUILDDIR)/utlpydep 
+	rm -f floraC.so
+
+mppl2f90:
+	(export PYTHONPATH=.:./pyscripts; $(MYPYTHON) convertor)
+
+$(BUILDDIR)/glrpydep: glr/basgen.F glr/coils.F glr/diagno.F glr/energy.F glr/equil.F glr/initial.F glr/math.F glr/matrix.F glr/rightvec.F glr/setup.F glr/blas.F glr/glr.v 
+	$(FORTHON) -a $(INSTALLARGS) -a $(FCOMP) $(DEBUG) --interfacefile glr/glr.v -f glr/basgen.F glr glr/coils.F glr/diagno.F glr/energy.F glr/equil.F glr/initial.F glr/math.F glr/matrix.F glr/rightvec.F glr/setup.F glr/blas.F
+	touch $@
+
+$(BUILDDIR)/utlpydep: $(BUILDDIR)/glrpydep utl/utility.F utl/utl.v glr/glr.v
+	$(FORTHON) -a $(INSTALLARGS)  -a $(FCOMP) $(DEBUG) --interfacefile utl/utl.v -d glr -f utl/utility.F utl 
+	touch $@
+
+public: all
+	publishpyflora90.py $(PUBLICHOME)
+
+update:
+	for dir in $(PUBLICHOME); do \
+	  cd $$dir; \
+	  cvs update; \
+	done
+
+clean:
+	find . -depth -name build -exec rm -rf {} \;
+	find . -depth -name __pycache__ -exec rm -rf {} \;
+	find . -name \*.pyc -exec rm {} \;
+	find . -name \*.F -exec rm {} \;
+	touch floraC_Forthon.c
+
+#----------------------------------------------------------------------------
+#--- Build command for opendx wrapper.
+DX: pyDXObject.c
+	$(MYPYTHON) DXsetup.py build --build-platlib .
+	#cp pyDXObject.so /home/dave/scriptsnew
+
+#----------------------------------------------------------------------------
+
+
