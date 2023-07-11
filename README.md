@@ -21,3 +21,12 @@ For a list of variables use <br>
 glr.varlist()
 
 Because of the way the external objects are created a dir(glr) will not reveal the variable names.
+
+## Release 
+
+Flora is released under an LGPL license.  For more details see the
+NOTICE and LICENSE files.
+
+``LLNL-CODE-431811``
+------
+--------
