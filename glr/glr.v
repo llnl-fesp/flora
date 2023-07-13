@@ -27,14 +27,11 @@ glr
     NCOIL=3		# Maximum number of coils (see NREGIONS).
     NREGIONS=NCOIL	# For now, these must be the same
     NINPUT=1000		# Maximum length of input arrays
+    ECHARG=4.8e-10
+    Pi=3.1415926535
 }
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  R O U T I N E S  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-***** GCONST:
-# CONSTANTS
-ECHARG real /4.8e-10/
-Pi     real /3.1415926535/
-    # Ion charge (statcoulomb).
 ***** Flora_routines:
 
 glrgen				subroutine
@@ -873,5 +870,3 @@ zks(NINPUT)	real			[cm]		+input
 bks(NINPUT)	real			[dimensionless]	+input
 	# B at zks for imported B(z) in KS region
 	limited(nks)
-zks2(NINPUT)	real			[cm]
-bks2(NINPUT)	real			[dimensionless]

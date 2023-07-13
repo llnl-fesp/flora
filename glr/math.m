@@ -129,7 +129,6 @@ cjb   ie not over half the range
 
       subroutine spline(x,y,n,bc1,bcn,yp,ypp,yppp,yint) # Cubic splines (from Corsica)
       implicit none
-      Use(GConst)
       integer n
       real x(n), y(n), yp(n), ypp(n), yppp(n), yint(n), bc1, bcn
       integer nbeg, nn, i

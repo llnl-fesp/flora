@@ -84,8 +84,8 @@ cjb instead of using bvx3 for the wider comp of slsks   read in rpxks
       bm1ks=rp1ks*( bvac(ix))
       alsitks=((1.-1./rp1ks**2)/(1.-1./rpxks**2)*(rp1ks/rpxks))**2
       alsiks=alsitks+.5*(1.-alsitks)*pfudgeks
-      write(msg,'(a,3e14.6)') 'rpxks,bm1ks,rp1ks,alsitks,alsiks', \
-                rpxks,bm1ks,rp1ks
+      write(msg,'(a,3e14.6)') 'rpxks,bm1ks,rp1ks,alsitks,alsiks', 
+     *           rpxks,bm1ks,rp1ks
       call baswline(STDOUT,msg)
       write(msg,'(32x,2e14.6)') alsitks,alsiks
       call baswline(STDOUT,msg)
@@ -180,8 +180,8 @@ c......readjust peak plug pressure for sloshing
       pfloat=((con1-don1*alsi)*bstr2**2+(con2-don2*alsi)*bstr2 \
             +con3-don3*alsi)*(1.+p3a*dip)
 
-      write(msg,'(a,3e14.6)') 'rtemp,rpxi2,ter1,ter2,bstr2,pfloat', \
-                rtemp,rpxi2,ter1
+      write(msg,'(a,3e14.6)') 'rtemp,rpxi2,ter1,ter2,bstr2,pfloat', 
+     *           rtemp,rpxi2,ter1
       call baswline(STDOUT,msg)
       write(msg,'(34x,3e14.6)') ter2,bstr2,pfloat
       call baswline(STDOUT,msg)
@@ -198,14 +198,14 @@ cjb      rtempks=(bm1ks/bvx3)**2
       ter2ks=(1.-rpxi2ks)**2
 cjb      bstr2ks=bvx3**2*(-ter1ks+alsiks*rtempks*ter2ks)/
 cjb     .        (-ter1ks+alsiks*ter2ks)
-      bstr2ks=bvoutks**2*(-ter1ks+alsiks*rtempks*ter2ks)/ \
-              (-ter1ks+alsiks*ter2ks)
+      bstr2ks=bvoutks**2*(-ter1ks+alsiks*rtempks*ter2ks)/ 
+     *         (-ter1ks+alsiks*ter2ks)
 
-      pfloatks=((con1ks-don1ks*alsiks)*bstr2ks**2 \
-              +(con2ks-don2ks*alsiks)*bstr2ks+con3ks-don3ks*alsiks)
+      pfloatks=((con1ks-don1ks*alsiks)*bstr2ks**2 
+     *         +(con2ks-don2ks*alsiks)*bstr2ks+con3ks-don3ks*alsiks)
 
-      write(msg,'(a,2e14.6)') 'rtempks,rpxi2ks,ter1ks,ter2ks,bstr2ks,pfloatks', \
-                    rtempks,rpxi2ks
+      write(msg,'(a,2e14.6)') 'rtempks,rpxi2ks,ter1ks,ter2ks,bstr2ks,pfloatks', 
+     *               rtempks,rpxi2ks
       call baswline(STDOUT,msg)
       write(msg,'(46x,2e14.6)') ter1ks,ter2ks
       call baswline(STDOUT,msg)
@@ -253,8 +253,8 @@ c....calculate passing pperp constants
       ap1=-bp1/(2.*bmax**2)
       cp1=ppas1-bp1*bmax**2-ap1*bmax**4
       altemp=bp1*(1.-(bmn1/bmax)**2)/(2.*(bmn1**2))
-      bp2=(ppas3-ppas2-altemp*(bvx2**4-bmn1**4))/(bvx2**2-bmn1**2 \
-         -.5*(bvx2**4-bmn1**4)/bmn1**2)
+      bp2=(ppas3-ppas2-altemp*(bvx2**4-bmn1**4))/(bvx2**2-bmn1**2 
+     *    -.5*(bvx2**4-bmn1**4)/bmn1**2)
       ap2=altemp-bp2*.5/bmn1**2
       cp2=ppas2-ap2*bmn1**4-bp2*bmn1**2
       betemp=4.*ap2*bvx2**2+2.*bp2
@@ -457,7 +457,6 @@ cjb        modified the way i did for first half
 c.....equilibrium for tandem mirror electron ring plug
 
       Use(ArraySizes)
-      Use(GConst)
       Use(Const_1)
       Use(Const_1a)
       Use(Const_2)
@@ -583,40 +582,43 @@ c     end if
 
 
               if (i==1 .and. dowriteb) then
-                  write(msg,'(a,2i5,3e14.6)') 'i,j,u1,u2,u3       ', \
-                            i,j,u1,u2,u3
+                  write(msg,'(a,2i5,3e14.6)') 'i,j,u1,u2,u3       ', 
+     *                       i,j,u1,u2,u3
                   call baswline(STDOUT,msg)
               endif
+cjb      if(i.eq.34 .and. j=1) write(*,*)'i,j,u1,u2,u3',i,j,u1,u2,u3
     
 c..... at,bt,ct coefficients for low density expansion
               at=u1
               bt=u2-.5
               ct=u3+bvac(i)**2*.5
               if (i == 1 .and. dowriteb) then
-                  write(msg,'(a,2i5,3e14.6)') 'i,j,at,bt,ct       ', \
-                            i,j,at,bt,ct
+                  write(msg,'(a,2i5,3e14.6)') 'i,j,at,bt,ct       ', 
+     *                       i,j,at,bt,ct
                   call baswline(STDOUT,msg)
               endif
 
 
               bv=bvac(i)
-              ordera2=4.*ct*bt+4.*(bt*bv)**2+8.*at*ct*bv**2+12.*at*bt*bv**4 \
-                     +8*at**2*bv**6
+              ordera2=4.*ct*bt+4.*(bt*bv)**2+8.*at*ct*bv**2+12.*at*bt*bv**4 
+     *                +8*at**2*bv**6
               bsq3=bv**2-2.*(ct+bt*bv**2+at*bv**4)+ordera2
-              if (i >=44 .and. i<=65 .and. j==1 .and. dowriteb) then
-                  write(msg,'(a,2i5,3e14.6)') 'i,j,bv,ordera2,bsq3', \
-                            i,j,bv,ordera2,bsq3
+              if (i == 1 .and. dowriteb) then
+                  write(msg,'(a,2i5,3e14.6)') 'i,j,bv,ordera2,bsq3', 
+     *                       i,j,bv,ordera2,bsq3
                   call baswline(STDOUT,msg)
-                  write(msg,'(a,2i5,2e14.6)') 'i,j,abs(ordera2/bsq3),epsp', \
-                            i,j,abs(ordera2/bsq3),epsp
-                  call baswline(STDOUT,msg)
-
               endif
+cjb        if(i.eq.34 .and. j=1)
+cjb      . write(*,*)'i,j,bv,ordera2,bsq3',i,j,bv,ordera2,bsq3
+cjb       if(i.gt.142 .and. j=1)
+cjb      . write(*,*)'i,j,bv,ordera2,bsq3,ss*bsq3**.5',
+cjb      .            i,j,bv,ordera2,bsq3,ss*bsq3**.5
 
+cjb       if((ordera2/bsq3).le.epsp) then
               if (abs(ordera2/bsq3) <= epsp) then
                   if (bsq3 < 0) then
-                      write(msg,'(a,4i10)')'neg bsq3: i,j,ordera2,bsq3', \
-                                i,j,ordera2,bsq3
+                      write(msg,'(a,4i10)')'neg bsq3: i,j,ordera2,bsq3', 
+     *                           i,j,ordera2,bsq3
                       call baswline(STDOUT,msg)
                       call baswline(STDOUT,'at,bt,ct,bv**2,-2.*(ct+bt*bv**2+at*bv**4)')
                       write(msg,'(41x,2e14.6)') at,bt
@@ -637,52 +639,55 @@ c..... at,bt,ct coefficients for low density expansion
                   
                   t1=-u2*.5/u1
                   radic2=(t1**2-u3/u1)
-                  if (j==1 .and. i >= 50  .and. i<=65 .and. dowriteb) then
-                      write(msg,'(a,2i10,2e14.6)') 'i,j,t1,radic2', \
-                                i,j,t1,radic2
+                  if (i == 1 .and. dowriteb) then
+                      write(msg,'(a,2i10,2e14.6)') 'i,j,t1,radic2', 
+     *                           i,j,t1,radic2
                       call baswline(STDOUT,msg)
                   endif
-
+cjb       if(i.eq.34 .and. j=1) write(*,*)'i,j,t1,radic2',i,j,t1,radic2
+cjb       if(i.gt.142 .and. j=1) write(*,*)'i,j,t1,radic2',i,j,t1,radic2
 
                   round=abs(radic2)/(t1**2+abs(u3/u1))
                   if (i == 1 .and. dowriteb) then
                       write(msg,'(a,2i10,e14.6)') 'i,j,round',i,j,round
                       call baswline(STDOUT,msg)
                   endif
-
+cjb        if(i.eq.34 .and. j=1) write(*,*)'i,j,round',i,j,round
+cjb        if(i.gt.142 .and. j=1) write(*,*)'i,j,round',i,j,round
 
                   if (round <= 1.e-6) radic2=0.
                   if (radic2 < 0) call errorend(i,j)
                   radic=sqrt(radic2)
                   bsq1=t1+radic
                   bsq2=t1-radic
-                  if (j==1 .and. i >= 44 .and. i<=65 .and. dowriteb) then
-                      write(msg,'(a,2i10,2e14.6)') 'i,j,t1,radic', 
-     *                           i,j,t1,radic
-                      call baswline(STDOUT,msg)
-                      if(bsq1>0 .and. bsq2>0) then
-                         write(msg,'(a,2i10,2e14.6)') 'i,j,bsq1**.5*ss,bsq2**.5*ss', 
-     *                           i,j,bsq1**.5*ss,bsq2**.5*ss
-                         call baswline(STDOUT,msg)
-                      endif
-                  endif
                   bsq=bsq1
-cjb                  if (t1 > radic) bsq=bsq2
-cjb replace latter with added decision re  bsq1 >< bvacsq
-cjb this seems to prevent large oddball b,rzz,pperp   
-cjb   for combo plug sloshing plus largebeta
-cjb Still need to add same thing in the r,rzzloops later in this subr
-
+c                  if (t1 > radic) bsq=bsq2
                   if (t1 > radic .and. bsq1>bvac(i)**2) bsq=bsq2
 
-                  if (j==1 .and. i >= 44 .and. i<=65  .and. dowriteb) then
+                  if (i == 1 .and. dowriteb) then
                       write(msg,'(a,2i10,3e14.6)')'i,j,bsq1,bsq2,bsq', 
      *                           i,j,bsq1,bsq2,bsq
                       call baswline(STDOUT,msg)
                   endif
+cjb         if(i.eq.34 .and. j=1)
+cjb      .  write(*,*)'i,j,bsq1,bsq2,bsq',i,j,bsq1,bsq2,bsq
+cjb         if(i.gt.142 .and. j=1)
+cjb      .  write(*,*)'i,j,bsq1,bsq2,bsq',i,j,bsq1,bsq2,bsq
 
 cjb save old b(i,2)
                   if (j == 2) bj2old(i)= sqrt(bsq)
+
+
+cjb need new ks p(b) model
+cjb      p2filt=1.
+cjb      if(dosubp. and. i.ge.ibvmax(2)) then
+cjb          p2filt=.5*(1.-tanh(alfsubp*(i-isubp)))      
+cjb          if(i.ge.isubpx) p2filt=0.
+cjb      endif 
+cjb      if(i.gt.ibvmax(2)) then
+cjb        bsq = bvac(i)**2 -
+cjb     .        (2*bvac(i)*jmbselfz(i)-jmbselfz(i)**2)*p2(j)*p2filt
+cjb      endif
 
 
                   if (bsq < 0) call errorend(i,j)
@@ -701,11 +706,14 @@ cjb need new ks p(b) model
                   p2filt=.5*(1.-tanh(alfsubp*(i-isubp)))      
                   if (i >= isubpx) p2filt=0.
               endif 
-cjbrepl              if (i > ibvmax(2)) then
-              if (i > ibvmax(1)) then
+              if (i > ibvmax(2)) then
+cwhm              if (i > ibvmax(1)) then
 
-cjbrepl                  bsq= bvac(i)**2-2*poshinks*jperpz(i)*p2(j)
-                  bsq= bvac(i)**2-2*posh(i)*jperpz(i)*p2(j)
+                  bsq= bvac(i)**2-2*poshinks*jperpz(i)*p2(j)
+cwhm
+cwhm      using posh(i) causes this to fail. unknown
+cwhm
+cwhm                  bsq= bvac(i)**2-2*posh(i)*jperpz(i)*p2(j)
 
                   b(i,j)=sqrt(bsq)
               endif
@@ -755,11 +763,8 @@ cjb add dt2ks, dt3ks  mimic dt2,dt3
 cjb dter1 not used;  dter2 not used except in nonsense zerosetting
 cjb  ppt used only in dter2
 
-cjb      write(msg,'(a,3e14.6)') 'ppt,dter1,dter2',ppt,dter1,dter2
-cjb      call baswline(STDOUT,msg)
-
-
-
+      write(msg,'(a,3e14.6)') 'ppt,dter1,dter2',ppt,dter1,dter2
+      call baswline(STDOUT,msg)
 
       do 20 i=1,ix
           do 21 j=1,jx
@@ -797,17 +802,16 @@ cjb retain these oldforms outside of newoldif   so can get pperpold,pparold
                   pperpold(i)=p2(2)*ppert
                   pparold(i)=p2(2)*ppart
               endif
-              if (j == 25) then
-                 pperpold25(i)=p2(25)*ppert
-              endif
 
-cjbrepl              if (i > ibvmax(2)) then
-              if (i > ibvmax(1)) then
+              if (i > ibvmax(2)) then
+cwhm              if (i > ibvmax(1)) then
 
-cjbrepl                  ppart=poshinks*jparz(i)
-cjbrepl                  ppert=poshinks*jperpz(i)
-                  ppart=posh(i)*jparz(i)
-                  ppert=posh(i)*jperpz(i)
+                  ppart=poshinks*jparz(i)
+                  ppert=poshinks*jperpz(i)
+cwhm
+cwhm using posh causes this to fail, unknown
+cwhm                  ppart=posh(i)*jparz(i)
+cwhm                  ppert=posh(i)*jperpz(i)
 
                   pperte=ppert
 cjb      keeping same symbols should transmit better to code below
@@ -816,6 +820,10 @@ cjb      keeping same symbols should transmit better to code below
               pperp(i,j)=p2(j)*ppert
               ppar(i,j)=p2(j)*ppart
 
+              if (i == 1) then
+                  write(msg,'(a,3e14.6)') 'dter,ppart,ppert',dter,ppart,ppert
+                  call baswline(STDOUT,msg)
+              endif
 
 
               if (pperp(i,j) < 0) then
@@ -836,11 +844,8 @@ cjb      keeping same symbols should transmit better to code below
 
 cjb will have to read in separate rho model or for now just use rho ~ pperp
 
-cjbrepl              if (i > ibvmax(2)) then
-              if (i > ibvmax(1)) then
-
-cjbrepl                  rho(i,j)=amass*(p2(j)**.5*noshinks*jperpz(i)+ 
-                  rho(i,j)=amass*(p2(j)**.5*nosh(i)*jperpz(i)+ 
+              if (i > ibvmax(2)) then
+                  rho(i,j)=amass*(p2(j)**.5*noshinks*jperpz(i)+ 
      *                      ncenter*cold*exp(-alfcold*(jx-j)))
               else
                   rho(i,j)=amass*(p2(j)**.5*(ebp(i)*b4+fbp(i)*b2+gbp(i))+ 
@@ -850,31 +855,14 @@ cjbrepl                  rho(i,j)=amass*(p2(j)**.5*noshinks*jperpz(i)+
 
 cjb why using p2(j)**.5????  just making the tanh shape steeper yet?
 
-cjb for doflat=true  make rho proportional to p2   ie take outthe sqrt
-cjb for somereason that 'doflat' test applied only to freisplug
-cjb   ie  not  jperpz ks
-cjb    We havent used freis ks for a long time.
+cjb for doflat make rho proportional to p2   ie take outthe sqrt
 
-cjb  the following  elseif looking goofy:  if doflat false (default) then
-cjb   dont set the rho at all!!?? 
-cjb      well then the immediately preceding settng of rho takes over.
-cjb need to clean this up an make the coding transparent
-cjb  as it stands  following code always resets the rho for ksjperpz
-cjb    but only if doflat=true does the following reset the rho for freisplug
-
-cjb  might well want to just settle on one p2(j) model for rho
-cjb   we could then take doflat out of this rho setting
-cjb   need to check whereelse  doflat is used
-
-cjbrepl              if (i > ibvmax(2)) then
-              if (i > ibvmax(1)) then
-
-cjbrepl                  rho(i,j)=amass*(p2(j)*noshinks*jperpz(i)+ 
-                  rho(i,j)=amass*(p2(j)*nosh(i)*jperpz(i)+ 
+              if (i > ibvmax(2)) then
+                  rho(i,j)=amass*(p2(j)*noshinks*jperpz(i)+ 
      *                     ncenter*cold*exp(-alfcold*(jx-j)))
               elseif (doflat) then
                   rho(i,j)=amass*(p2(j)*(ebp(i)*b4+fbp(i)*b2+gbp(i))+ 
-     *                     ncenter*cold*exp(-alfcold*(jx-j)))
+     *                      ncenter*cold*exp(-alfcold*(jx-j)))
               endif
 
 
@@ -893,19 +881,15 @@ cjb exp(-alfcold*(50-1)) =    9.52181D-01 at j=1   for alfcold=1e-3
               dbdpsi(i,j)=-(fac1+fac2)/(b(i,j)*(1.+fac3*2.))
               if (j == 2) dbdpsiold(i)=dbdpsi(i,j)
               
-cjbrepl              if (i > ibvmax(2)) then
-              if (i > ibvmax(1)) then
-
+              if (i > ibvmax(2)) then
                   fac1=0.
-cjbrepl                  fac2=dp2dpsi(j)*poshinks*jperpz(i)
-                  fac2=dp2dpsi(j)*posh(i)*jperpz(i)
-
+                  fac2=dp2dpsi(j)*poshinks*jperpz(i)
 cjb  prob want fac2 w p2filt also,  doit via p2filt on jperpz
 
 
-cjbrepl                  fac3=p2(j)*poshinks*jdfz(i)/bvac(isubp)**2
-cjbreplagain                  fac3=p2(j)*posh(i)*jdfz(i)/bvac(isubp)**2
-                  fac3=p2(j)*posh(i)*jdfz(i)/bvacnorm(i)**2
+cjbout        fac3=p2(j)*poshinks*jdfz(i)
+cjb uuurrk this seems to be missing 1/bvac(isubp)^2
+                  fac3=p2(j)*poshinks*jdfz(i)/bvac(isubp)**2
 
                   dbdpsi(i,j)=-(fac1+fac2)/(b(i,j)*(1.+fac3*2.))
               endif
@@ -922,20 +906,12 @@ cjb     looks like d/db  (pperp+ppar)    so need d/db of jparz also
                   dp3dbold=dp3db
               endif
               
-cjbrepl              if (i > ibvmax(2)) then
-              if (i > ibvmax(1)) then
-
-cjbrepl                  dp2db=poshinks*ddbprpz(i)/bvac(isubp)
-cjbreplagain             dp2db=posh(i)*ddbprpz(i)/bvac(isubp)
-                  dp2db=posh(i)*ddbprpz(i)/bvacnorm(i)
-
+              if (i > ibvmax(2)) then
+                  dp2db=poshinks*ddbprpz(i)/bvac(isubp)
                   dp2dbe=dp2db
-cjbrepl                  dp3db=dp2db+poshinks*ddbparz(i)/bvac(isubp)
-cjbreplagain             dp3db=dp2db+posh(i)*ddbparz(i)/bvac(isubp)
-                  dp3db=dp2db+posh(i)*ddbparz(i)/bvacnorm(i)
-
+                  dp3db=dp2db+poshinks*ddbparz(i)/bvac(isubp)
               endif
-cjb if i>ibvmax(1) this last overwrites the old version
+cjb if i>ibvmax(2) this last overwrites the old version
 
 
               qubv(i,j)=(-dp2dpsi(j)*(ppert+ppart)-p2(j)*dp3db*dbdpsi(i,j))
@@ -967,11 +943,11 @@ cjb      if(doflat) omegexb=exbratio*omegstr
 
               omegexb=exbratio*omegstr
 
-cjb              if (i == 1) then
-cjb                  write(msg,'(a,i10,3e14.6)') 'j,omegexb,omegstr,omeggb', 
-cjb     *                       j,omegexb,omegstr,omeggb
-cjb                  call baswline(STDOUT,msg)
-cjb              endif
+              if (i == 1) then
+                  write(msg,'(a,i10,3e14.6)') 'j,omegexb,omegstr,omeggb', 
+     *                       j,omegexb,omegstr,omeggb
+                  call baswline(STDOUT,msg)
+              endif
               if (i == 1) then
                   omstri1(j)=omegstr
                   omgbi1(j)=omeggb
@@ -1178,11 +1154,13 @@ cjb      this branch if  either bsq3<0 or ordera2<0   one only
                   bsq1=t1+radic
                   bsq2=t1-radic
                   bsq=bsq1
+cwhm                  if (t1 > radic) bsq=bsq2
                   if (t1 > radic .and. bsq1>bvac(i)**2) bsq=bsq2
                   bk=sqrt(bsq)
               endif
 
-
+cjb put in new model   read in jbtotz(i)  from Basis input file jpbtotz.b
+cjb apply p2filt on pressure equiv term
               p2filt=1.
               if (dosubp .and. i >= 50) then
                   p2filt=.5*(1.-tanh(alfsubp*(i-isubp)))      
@@ -1190,11 +1168,13 @@ cjb      this branch if  either bsq3<0 or ordera2<0   one only
               endif 
 
 
-cjbrepl              bsqjb=bvac(i)**2-2*poshinks*jperpz(i)*p2k(k,j)
-              bsqjb=bvac(i)**2-2*posh(i)*jperpz(i)*p2k(k,j)
+cjb  jmbselfz= bvac-jbtotz     jbtotz=bv-jmb    jbtotsq =bvsq -2bv*jmb +jmbsq
+cjb   bvsq -jbtotsq = 2bv*jmb-jmbsq
 
+              bsqjb=bvac(i)**2-2*poshinks*jperpz(i)*p2k(k,j)
 
-cjb p2filt in jperpz 
+cjb p2filt in jperpz   .                   2*poshinks*jperpz(i)*p2k(k,j)*p2filt
+cjbold     .        (2*bvac(i)*jmbselfz(i)-jmbselfz(i)**2)*p2k(k,j)*p2filt
 
               bkjb=sqrt(bsqjb)
 
@@ -1204,13 +1184,25 @@ cjb p2filt in jperpz
 cjb  capf  = 1. +2.*p2k*(2.*abp*bk**2+bbp)    ignoring p1k eringterm
 cjb  capf  = 1. +2*dpperp/dbsq
 
-cjbrepl              capfnew=1.+2.*p2k(k,j)*poshinks*jdfz(i)/bvac(isubp)**2
-cjbreplagain              capfnew=1.+2.*p2k(k,j)*posh(i)*jdfz(i)/bvac(isubp)**2
-cjb must need different bvac(isubp) for plug vs ks  as well as posh
-              capfnew=1.+2.*p2k(k,j)*posh(i)*jdfz(i)/bvacnorm(i)**2
+              capfnew=1.+2.*p2k(k,j)*poshinks*jdfz(i)/bvac(isubp)**2
 
 
-cjb do i need posh(i) set in ccell  for capfnew?  prev capfnew=0 if jdfz=0
+cjb following equally valid  uses only jperpz  no need for jmbselfz or jbtotz
+cjb  tested via printout in file bsqjperp
+cjb      bsqjprp = bvac(i)**2 -
+cjb     .        ( 2*poshinks*jperpz(i))*p2k(k,j)*p2filt
+   
+
+
+
+cjb when try to combine floramodel with ksnew
+cjb    want to sum both pieces   using floramodel for ccell+plug
+cjb    capftot = 1.+2.*p2k(k,j)*poshinks*jdfz(i)/bvac(isubp)**2
+cjb                +2.*p2k(k,j)*(2.*abp(i)*bk**2+bbp(i))
+cjb better, factor out the 2*p2k
+cjb      capftot = 1.+2.*p2k(k,j)*(poshinks*jdfz(i)/bvac(isubp)**2
+cjb                                +(2.*abp(i)*bk**2+bbp(i)) )
+cjb  despite the sum, the two pieces operate exclusively in separate z-regions
 
               deli1(k)=1./bk
               deli2(k)=1./(bk**3*capf)
@@ -1219,10 +1211,15 @@ cjb do i need posh(i) set in ccell  for capfnew?  prev capfnew=0 if jdfz=0
               deli5(k)=p2k(k,j)/(capf*bk)**3
 
 
+cjb       del1new(k)=1./bk
+cjb       del2new(k)=1./(capfnew*bk**3)
+cjb       del3new(k)=del2new(k)/(capfnew*bk**2)
+cjb       del5new(k)=p2k(k,j)/(capfnew*bk)**3
+
               del1new(k)=1./bkjb
               del2new(k)=1./(capfnew*bkjb**3)
               del3new(k)=del2new(k)/(capfnew*bkjb**2)
-              del5new(k)=p2k(k,j)/(capfnew*bkjb)**3  
+              del5new(k)=p2k(k,j)/(capfnew*bkjb)**3
 
  32           continue         
 
@@ -1287,8 +1284,7 @@ cjbold
 cjbksnew
           rnewks=sqrt(2.*cap1new)
 
-cjbrepl          if (i > ibvmax(2)) then
-          if (i > ibvmax(1)) then
+          if (i > ibvmax(2)) then
               r(i,j)= rnewks
           else      
               r(i,j)=roldpg
@@ -1324,15 +1320,11 @@ cjbnewks
           rzznewks=-vv1*cap2new**2/r(i,j)**3+3.*vv1*cap3new/r(i,j) 
      *             -vv2*cap2new/r(i,j)+ 
      *              4.*bvac(i)**2*dbvdz(i)**2* 
-     *              (posh(i)*jd2fz(i)/bvacnorm(i)**4*cap5new)/r(i,j)
-
-cjbreplagain                   (posh(i)*jd2fz(i)/bvac(isubp)**4*cap5new)/r(i,j)
-cjbrepl                   (poshinks*jd2fz(i)/bvac(isubp)**4*cap5new)/r(i,j)
+     *              (poshinks*jd2fz(i)/bvac(isubp)**4*cap5new)/r(i,j)
 
 cjb  to manage needing old form for ccplg and newform for ks
 cjb  retain old coding here also;  assign oldvalue and newvalue to tempscalars
-cjbrepl          if (i > ibvmax(2)) then
-          if (i > ibvmax(1)) then
+          if (i > ibvmax(2)) then
               rzz(i,j)=rzznewks
           else      
               rzz(i,j)=rzzoldpg
@@ -1364,7 +1356,7 @@ cjb  nolonger use rnew except for rd2new
               rzz1bnew(i)=3*vv1*cap3new/r(i,j)
               rzz2new(i)=-vv2*cap2new/r(i,j)
               rzz3new(i)=4*bvac(i)**2*dbvdz(i)**2* 
-     *                     (posh(i)*jd2fz(i)/bvacnorm(i)**4*cap5new)/r(i,j)
+     *                     (poshinks*jd2fz(i)/bvac(isubp)**4*cap5new)/r(i,j)
 
 cjbreplagain              (posh(i)*jd2fz(i)/bvac(isubp)**4*cap5new)/r(i,j)
 cjbrepl                   (poshinks*jd2fz(i)/bvac(isubp)**4*cap5new)/r(i,j)
@@ -1434,7 +1426,7 @@ cjb   adding dbvdz(i)**2 to 4th term  supplys b^2/L^2  --> net of  1/L  ok
           sum5new=cap5new
 
           rzzr=r(i,j)*rzz(i,j)
-
+cjb      rzzrmax=amax1(rzzrmax,rzzr)
           rzzrmax=max(rzzrmax,rzzr)
  41       continue
  40   continue
@@ -1774,17 +1766,17 @@ cjb  even for Post p(b), pperp approaches 0+  at injection
       btksinjo=4*pperpold(isubp)/bvac(isubp)**2
 
 
-      write(msg,'(a,2e14.6)') 'btksinj=2*pperpinj/bvac(isubp)**2,btksinjo ',
-     *                          btksinj,btksinjo
+      write(msg,'(a,2e14.6)') 'btksinj=2*pperpinj/bvac(isubp)**2,btksinjo ',\
+                               btksinj,btksinjo
       call baswline(STDOUT,msg)
 
-      write(msg,'(a,3e14.6)') 'postjbpg,pjbksmax,pjbksmaxo ',
-     *                          postjbpg,pjbksmax,pjbksmaxo
+      write(msg,'(a,3e14.6)') 'postjbpg,pjbksmax,pjbksmaxo ',\
+                               postjbpg,pjbksmax,pjbksmaxo
       call baswline(STDOUT,msg)
 
       sumpostint=postjbpg+pjbksmax
-      write(msg,'(a,3e14.6)') 'sumpostint,postjbsum,postjb ',
-     *                          sumpostint,postjbsum,postjb 
+      write(msg,'(a,3e14.6)') 'sumpostint,postjbsum,postjb ',\
+                               sumpostint,postjbsum,postjb 
       call baswline(STDOUT,msg)
 
        

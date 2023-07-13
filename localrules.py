@@ -187,7 +187,7 @@ M2Fsubrules.insert(6,grdproc)
 M2Fsubrules.insert(3,("do i1=","do_i1: do i1="))
 M2Fsubrules.insert(4,("break (2) ! exit do_i1","exit do_i1"))
 M2Fsubrules.insert(5,("enddo ! do_i1","enddo do_i1"))
-M2Fsubrules.insert(6,("float","real"))
-M2Fsubrules.insert(6,("dfloat","real"))
+#M2Fsubrules.insert(6,("float","real"))
+#M2Fsubrules.insert(6,("dfloat","real"))
 
 

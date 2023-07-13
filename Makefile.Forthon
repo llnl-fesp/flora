@@ -1,5 +1,4 @@
-DEBUG = -v --fargs "-Ofast -DFORTHON -cpp -DYES=1 -DOK=0 -DDONE=1 -DSTDOUT=6 -fallow-argument-mismatch" # -g #--fargs "-C=array" #--fargs "-CB -traceback"
-
+DEBUG = -v --fargs "-Ofast -DFORTHON -cpp -DNINPUT=1000 -DYES=1 -DOK=0 -DDONE=1 -DSTDOUT=6 -fallow-argument-mismatch -finit-real=zero -finit-integer=0 -fdefault-real-8 -DECHARG=4.8e-10 -DPi=3.141592653"
 SO = so
 PUBLICHOME = 
 BUILDDIR = build

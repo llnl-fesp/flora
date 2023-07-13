@@ -8,7 +8,6 @@ c.....test case 1, cos(kz) in z, flat in psi
 c.....set up 1/4/82 by r. freis
 
       Use(ArraySizes)
-      Use(GConst)
       Use(Const_1)
       Use(Const_1a)
       Use(Const_2)

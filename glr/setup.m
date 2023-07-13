@@ -7,7 +7,6 @@
       # Calculates grid quantities needed by sub. grid.
 
       Use(ArraySizes)
-      Use(GCONST)
       Use(Btable)
       Use(Coils)
       Use(Const_1)
@@ -26,7 +25,7 @@
       integer i, ii, iks
       real dbudz, d2budz2, bum1, bum2
       real z1bum, z2bum, psimax, pmag1, pmag0, pmag2, pmagend
-      real bscale, bc1, bcn
+      real bscale, bc1, bcn, zks2(NINPUT), bks2(NINPUT)
 
 c..... boundary conditions are set as follows:
 c.....   at z=z0 (i=1), fi1=-1. implies x=0.
@@ -81,7 +80,7 @@ c.....calculate bmax, psimax, du, dv, then call grid
       du=u(ix)/(ix-1.5)
       dv=v(jx)/(jx-1.5)
       call grid
-c.... calculate bvac, and first and second z derivatives
+c..... calculate bvac, and first and second z derivatives
       call bvcal(bs,zs,ass,als,z,ix,ztran,bcen,ltran,bvac,dbvdz,d2bvdz2, 
      *            bmn1,bmn2,z1min,z2min,ncoil)
       call bvcal(bs,zs,ass,als,0.0,1,ztran,bcen,ltran,bv0,dbudz,d2budz2, 
