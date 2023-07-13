@@ -1,14 +1,14 @@
 # Flora Equilibrium and Stability Code
 
 
-To build:
+### To build:
 
-This requires gfortran. It requires some compiler switches not available in gforran < 10. It's been tested with 10.0.1, 11.2, 11.3, and 12.2.
+This requires gfortran. Some compiler switches used are not available in gfortran < 10. It's been tested with gfortran 10.0.1, 11.2, 11.3, and 12.2.
 
 pip install forthon<br>
 python setup.py build install
 
-To run the code:
+### To run the code:
 
 import flora<br>
 flora.glr.glrgen()
@@ -23,7 +23,7 @@ glr.varlist()
 
 Because of the way the external objects are created a dir(glr) will not reveal the variable names.
 
-Running:
+### Examples:
 
 There are a couple of cases in the examples directory. Run with:
 
@@ -32,7 +32,7 @@ python test2.py <br>
 
 Compare with test1_ref.log and test2_ref.log. These logs are very old, compare for general agreement only. 
 
-# Release 
+### Release 
 
 Flora is released under an LGPL license.  For more details see the
 NOTICE and LICENSE files.
