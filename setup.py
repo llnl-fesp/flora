@@ -140,7 +140,16 @@ setup(name="flora",
       test_suite="pytests",
       install_requires=['forthon'],
       # note that include_dirs may have to be expanded in the line above
-      classifiers=['Programming Language :: Python',
-                   'Programming Language :: Python :: 3']
+      platforms = 'any',
+      classifiers=[
+                   'Programming Language :: Fortran',
+                   'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+                   'Topic :: Scientific/Engineering :: Physics',
+                   'Programming Language :: Python :: 3.6',
+                   'Programming Language :: Python :: 3.7',
+                   'Programming Language :: Python :: 3.8',
+                   'Programming Language :: Python :: 3.9',
+                   'Programming Language :: Python :: 3.10',
+                   'Programming Language :: Python :: 3.11']
 
       )
