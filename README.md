@@ -2,8 +2,7 @@
 
 
 ### To build:
-
-This requires gfortran. Some compiler switches used are not available in gfortran < 10. It's been tested with gfortran 10.0.1, 11.2, 11.3, and 12.2.
+Compatible with Python>3.5 and Gfortran>=10. Some compiler switches used are not available in Gfortran < 10. It's been tested with Gfortran 10.0.1, 11.2, 11.3, and 12.2 and Python 3.6-3.11 on Mac M1, Linux RHEL7 x86_64, and Pop 22.04 x86_64.
 
 pip install forthon<br>
 python setup.py build install
