@@ -1,0 +1,155 @@
+finished storage
+finished inputtm
+finished pob2poz
+finished constant
+rpx,bm1,rp1,alsit,alsi  0.212823E+01  0.106039E+04  0.200000E+01
+                        0.818143E+00  0.818143E+00
+rpxks,bm1ks,rp1ks,alsitks,alsiks  0.300000E+02  0.647622E+02  0.200000E+02
+                                  0.443209E+00  0.997216E+00
+rtemp,rpxi2,ter1,ter2,bstr2,pfloat  0.883129E+00  0.220782E+00  0.438703E+00
+                                    0.607180E+00  0.486965E-08  0.192481E+00
+rtempks,rpxi2ks,ter1ks,ter2ks,bstr2ks,pfloatks  0.444444E+00  0.111111E-02
+                                                0.196544E+00  0.997779E+00
+                                                0.290363E+04  0.385472E+00
+finished tmcon2
+dp1,dp2,dp3  0.000000E+00  0.000000E+00  0.000000E+00
+dt0,dt1,dt2,dt3 -0.903928E-10  0.000000E+00 -0.284218E+03 -0.267094E+03
+ppt,dter1,dter2  0.177778E+01 -0.132147E-01  0.140353E+04
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb         1  0.000000E+00  0.456217-121  0.198801-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb         2  0.000000E+00  0.456217-121  0.198801-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb         3  0.000000E+00  0.652174-121  0.282451-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb         4  0.000000E+00  0.928597-121  0.398647-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb         5  0.000000E+00  0.131475-120  0.557384-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb         6  0.000000E+00  0.184679-120  0.769101-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb         7  0.000000E+00  0.256569-120  0.104192-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb         8  0.000000E+00  0.351103-120  0.137643-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb         9  0.000000E+00  0.470827-120  0.175795-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        10  0.000000E+00  0.614882-120  0.214831-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        11  0.000000E+00  0.776665-120  0.248336-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        12  0.000000E+00  0.942340-120  0.268453-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        13  0.000000E+00  0.109198-119  0.268793-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        14  0.000000E+00  0.120431-119  0.247837-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        15  0.000000E+00  0.126359-119  0.210288-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        16  0.000000E+00  0.126478-119  0.164956-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        17  0.000000E+00  0.121413-119  0.120687-132
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        18  0.000000E+00  0.112529-119  0.832784-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        19  0.000000E+00  0.101401-119  0.548314-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        20  0.000000E+00  0.894084-120  0.348175-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        21  0.000000E+00  0.775608-120  0.215167-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        22  0.000000E+00  0.664842-120  0.130350-133
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        23  0.000000E+00  0.565006-120  0.778406-134
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        24  0.000000E+00  0.477221-120  0.460104-134
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        25  0.000000E+00  0.401328-120  0.269999-134
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        26  0.000000E+00  0.336476-120  0.157637-134
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        27  0.000000E+00  0.281501-120  0.917083-135
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        28  0.000000E+00  0.235157-120  0.532205-135
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        29  0.000000E+00  0.196239-120  0.308318-135
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        30  0.000000E+00  0.163644-120  0.178400-135
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        31  0.000000E+00  0.136394-120  0.103140-135
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        32  0.000000E+00  0.113642-120  0.595949-136
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        33  0.000000E+00  0.946628-121  0.344203-136
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        34  0.000000E+00  0.788397-121  0.198746-136
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        35  0.000000E+00  0.656537-121  0.114735-136
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        36  0.000000E+00  0.546686-121  0.662274-137
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        37  0.000000E+00  0.455189-121  0.382240-137
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        38  0.000000E+00  0.378990-121  0.220600-137
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        39  0.000000E+00  0.315537-121  0.127308-137
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        40  0.000000E+00  0.262702-121  0.734663-138
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        41  0.000000E+00  0.218711-121  0.423947-138
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        42  0.000000E+00  0.182083-121  0.244639-138
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        43  0.000000E+00  0.151588-121  0.141167-138
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        44  0.000000E+00  0.126198-121  0.814577-139
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        45  0.000000E+00  0.105060-121  0.470031-139
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        46  0.000000E+00  0.874612-122  0.271216-139
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        47  0.000000E+00  0.728094-122  0.156494-139
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        48  0.000000E+00  0.606111-122  0.902964-140
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        49  0.000000E+00  0.504555-122  0.520998-140
+dter,ppart,ppert -0.903928E-10  0.178009E-07  0.337925E-07
+j,omegexb,omegstr,omeggb        50  0.000000E+00  0.420006-122  0.300601-140
+post1r unitpressure instab integral  0.769040E-02
+post2r ptot/ptotinj instab integral, pnorm  -0.219369E-01  0.845576E+01
+grow=  0.252642E+15   growmax=  0.179514E+14
+maximum xxxfreq*dt=   0.000000E+00    (flr real frequency times dt)
+maximum rzz*r=   0.940277E+00
+relative wall pressure p2(jx)=  0.161959E-05
+finished equiltm
+finished f1to11
+finished amat
+beginning of comat, amaxabar=   0.000000E+00
+begin of comat, maxa1=   0.456155E+07
+ibrx,jbrx=       864         5
+a1(ibrx-2:ibrx+1,jbrx)
+  0.400576E+07  0.418376E+07  0.456155E+07  0.716675E+03
+a1(ibrx,jbrx-2:jbrx+1)
+  0.106183E+07 -0.227758E+07  0.456155E+07 -0.226668E+07
+finished comat
+finished initial
+finished mymovexro
+finished mymovexio
+finished mymovexroo
+finished mymovexioo
+before call dgbtrf, amaxabar=   0.456155E+07
+ibrx,jbrx=        99       864
+abar(ibrx-2:ibrx+1,jbrx)
+  0.000000E+00 -0.213686E+07  0.456155E+07  0.000000E+00
+abar(ibrx,jbrx-2:jbrx+1)
+  0.400576E+07  0.418376E+07  0.456155E+07  0.716675E+03
+genasum= dasum(50,abar(99,1),1)=   0.394746E+03
+finished dgbtrf(kxx,kxx,..)
+after call dgbtrf, amaxabar=   0.456155E+07
+ibrx,jbrx=        50       864
+abar(ibrx-2:ibrx+1,jbrx)
+  0.000000E+00 -0.213686E+07  0.456155E+07  0.193962E+07
+abar(ibrx,jbrx-2:jbrx+1)
+  0.400576E+07  0.418376E+07  0.456155E+07  0.240084E-04
+end of subr energy
+finished energy, last one in glrgen
