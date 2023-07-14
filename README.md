@@ -29,6 +29,8 @@ There are a couple of cases in the examples directory. Run with:
 python test1.py <br>
 python test2.py <br>
 
+Uncomment the call to plots1() for some graphics.
+
 Compare with test1_ref.log and test2_ref.log. These logs are very old, compare for general agreement only. 
 
 ### Release 
