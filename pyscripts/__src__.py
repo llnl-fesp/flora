@@ -1,1 +1,1 @@
-__src__ = '/home/meyer8/flora'
+__src__ = '/Users/meyer8/Flora/pyflora'
