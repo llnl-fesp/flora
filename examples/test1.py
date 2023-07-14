@@ -11,4 +11,5 @@ import jpostvbb
 glr.dowriteb=True
 glr.glrgen()
 
+#uncomment the next line for plots
 #plots1()
