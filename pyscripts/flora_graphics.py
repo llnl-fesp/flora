@@ -39,8 +39,8 @@ def plots1():
 
     fig,axs = plt.subplots(2)
     fig.suptitle(utl.probid.tostring().strip().decode())
-    axs[0].plot(glr.bvac[iz2:iz5]/glr.bvac[139],glr.pperpold[iz2:iz5],linestyle='dashed')
-    axs[0].plot(glr.bvac[iz2:iz5]/glr.bvac[139],glr.pparold[iz2:iz5],linestyle='dashed')
+    axs[0].plot(glr.bvac[iz3:iz5]/glr.bvac[139],glr.pperp[iz3:iz5,1],linestyle='dashed')
+    axs[0].plot(glr.bvac[iz3:iz5]/glr.bvac[139],glr.pperpold[iz3:iz5],linestyle='dashed')
     axs[0].set(xlabel='bvac/bvacinj',ylabel='pperp,pperpold')
     axs[1].axis('off')
     plt.show()
