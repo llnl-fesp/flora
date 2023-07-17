@@ -7,7 +7,8 @@ Compatible with Python>3.5 and Gfortran>=10. Some compiler switches used are not
 If using Python from an Anaconda installation pay close attention to the GCC version printed out by Anaconda when you run Python. If it reports a GCC(7.3.0) then you will need to install a non-Anaconda python as your Anaconda Python is incompatible with the Gfortran required for Flora. The test described below will generate a segmentation violation if Anaconda and Gfortran are incompatible.
 ### Building:
 pip install forthon<br>
-python setup.py build install
+python setup.py build install # if you have permissions to install python packages <br>
+python setup.py build install --user # to install in your user python area if you don't have needed permissions
 
 ### To run the code:
 $ python<br>
