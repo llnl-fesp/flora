@@ -2,13 +2,13 @@
 
 
 ### To build:
-Compatible with Python>3.5 and Gfortran>=10. Some compiler switches used are not available in Gfortran < 10. It's been tested with Gfortran 10.0.1, 11.2, 11.3, and 12.2 and Python 3.6-3.11 on Mac M1, Linux RHEL7 x86_64, and Pop 22.04 x86_64.
+Compatible with Python>3.5 and Gfortran>=10. Some compiler switches used are not available in Gfortran < 10. It's been tested with Gfortran 10.0.1, 11.2, 11.3, and 12.2 and Python 3.6-3.11 on Mac M1, Linux RHEL7 x86_64, and Pop 22.04 x86_64. If using Python from an Anaconda installation pay close attention to the GCC version printed out by Anaconda when you run Python. If it reports a GCC(7.3.0) then you will need to install a non-Anaconda python as it is incompatible with the Gfortran required for Flora.
 
 pip install forthon<br>
 python setup.py build install
 
 ### To run the code:
-
+$ python
 import flora<br>
 flora.glr.glrgen()
 
